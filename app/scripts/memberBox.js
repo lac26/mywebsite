@@ -7,18 +7,25 @@ import $ from 'jquery';
 import { POLL_INTERVAL } from './global';
 import Blog from './Blog';
 
+var num = 0;
+var found = 0;
 
 module.exports = React.createClass({
     getInitialState: function() {
         return {data: []};
     },
     loadmembersFromServer: function() {
+        num = num + 5;
+
         $.ajax({
-            url: 'https://public-api.wordpress.com/rest/v1.1/sites/mysquarecm.wordpress.com/posts',
+            url: 'https://public-api.wordpress.com/rest/v1.1/sites/mysquarecm.wordpress.com/posts?number=' + num,
             dataType: 'json',
             cache: false,
         })
          .done(function(result){
+            found = result.found; 
+
+            console.log(found);
              this.setState({data: result});
          }.bind(this))
          .fail(function(xhr, status, errorThrown) {
@@ -28,6 +35,26 @@ module.exports = React.createClass({
     componentDidMount: function() {
         this.loadmembersFromServer();
         setInterval(this.loadeventsFromServer, POLL_INTERVAL);
+    },
+    handleSubmit: function() {
+        num = num + 5;
+        $.ajax({
+            url: 'https://public-api.wordpress.com/rest/v1.1/sites/mysquarecm.wordpress.com/posts?number=' + num,
+            dataType: 'json',
+            cache: false,
+        })
+         .done(function(result){
+             this.setState({data: result});
+             console.log("num is " + num);
+             console.log("found is " + found);
+             if (num >= found){
+                //TODO: hide button
+                $("button").hide();
+             }
+         }.bind(this))
+         .fail(function(xhr, status, errorThrown) {
+             console.error(this.props.url, status, errorThrown.toString());
+         }.bind(this));
     },
     render: function() {
 
@@ -51,6 +78,8 @@ module.exports = React.createClass({
                 <br/>
                 <br/>             
                 </div>
+
+               <button type="submit" onClick={this.handleSubmit}>Load More </button>
 
             </div>
         );
