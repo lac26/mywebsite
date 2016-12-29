@@ -1,0 +1,203 @@
+/* Authors: Paige Brinks (plb7), Lydia Cupery (lac26)
+ * Date: December 19, 2016
+ * 
+ * stylesheet for WICsite
+ * style.sty compiles into CSS
+ */
+/* color variables */
+/* menu is a flexbox */
+.menu {
+  display: flex;
+}
+.nav {
+  width: 20%;
+  margin: auto;
+  position: fixed;
+  top: 0px;
+  left: 80%;
+  height: 100%;
+}
+.nav ul {
+  list-style: none;
+  background-color: #444;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+.nav li {
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2em;
+  line-height: 40px;
+  height: 25%;
+  border-bottom: 1px solid #888;
+  display: flex;
+}
+.nav a {
+  width: 100px; /* Or whatever */
+  margin: auto /* ;  Magic! */;
+  text-decoration: none;
+  color: #fff;
+  display: block;
+  transition: 0.3s background-color;
+}
+.nav li:hover {
+  background-color: #005f5f;
+}
+.nav li.active {
+  background-color: #fff;
+  color: #444;
+  cursor: default;
+}
+html {
+  height: 100%;
+}
+body {
+  background: #f0f8ff;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.7;
+  margin: 0;
+  padding-left: 30px;
+  position: relative;
+  min-height: 90%;
+  padding-bottom: 60px;
+  display: flex;
+}
+.content {
+  width: 70%;
+}
+footer {
+  background-color: #270c40;
+  height: 50px;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  color: #f0f8ff;
+  text-align: center;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-weight: bold;
+  margin: 0 0 15px;
+  padding: 0;
+}
+h1 {
+  border-bottom: 1px solid #ddd;
+  font-size: 1.5em;
+  width: 80%;
+}
+/* formats text boxes */
+.inputFormat {
+  padding: 10px;
+  margin-top: 5px;
+  border: 2px solid #551a8b;
+  border-radius: 4px;
+  width: 30%;
+  display: block;
+}
+.pageHeader {
+  text-align: left;
+  font-size: 2.5em;
+  width: 60%;
+  text-align: left;
+}
+.buttonFormat {
+  font-size: 0.7em;
+  color: #551a8b;
+  border-radius: 4px;
+  padding: 6px;
+  cursor: pointer;
+  background-color: #99cfff;
+  text-decoration: none;
+  border: 0;
+}
+.websiteBlog {
+  background-color: #f00;
+}
+.buttonFormat:hover {
+  background-color: #66b8ff;
+}
+.editButtons {
+  display: inline;
+}
+.editButtons .buttonFormat {
+  margin: 2px;
+}
+/* Content formatting (members and events) */
+/* Member and event names */
+.contentHeader {
+  font-size: 1em;
+  font-weight: bold;
+  width: 80%;
+}
+/* any information associtated with members or events */
+.contentInfo {
+  width: 50%;
+  font-size: 0.8em;
+}
+/* About page - leadership bios formatting */
+.leadershipName {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #551a8b;
+}
+.leadershipRole {
+  font-style: italic;
+  font-weight: normal;
+}
+.leadershipDesc {
+  width: 50%;
+}
+.leadershipEmail {
+  font-style: italic;
+  border-bottom: 1px solid #ddd;
+}
+/* home page - image formatting */
+.imageOne {
+  width: 51%;
+}
+.imageTwo {
+  width: 25%;
+  padding-right: 1%;
+}
+/* responsive */
+@media all and (max-width: 640px) {
+  .inputFormat {
+    width: 90%;
+  }
+  .pageHeader {
+    font-size: 1.3em;
+  }
+  .headerMenu {
+    padding-left: 2%;
+    text-align: center;
+  }
+  .headerMenu li {
+    font-size: 0.7em;
+    padding: 0 2%;
+  }
+  .contentInfo {
+    width: 100%;
+  }
+  .editButtons .buttonFormat {
+    width: 60px;
+  }
+  .imageOne {
+    width: 90%;
+  }
+  .imageTwo {
+    width: 90%;
+  }
+  .leadershipDesc {
+    width: 90%;
+  }
+  footer {
+    font-size: 0.7em;
+  }
+}
