@@ -10,6 +10,7 @@ import MemberBox from './memberBox';
 import App from './App.js';
 import Home from './Home.js';
 import About from './About.js';
+import Choose from './Choose.js';
 
 ReactDOM.render((
     <Router history={browserHistory}>
@@ -22,7 +23,18 @@ ReactDOM.render((
         	<Route path="/members/:id" component={MemberBox} />	
             <Route path="/blog" component={MemberBox} />
             <Route path="/events" component={About} />
-        </Route>
+            <Route path="/choose" component={Choose}/>
+
+            <Route path="/blog" component={Choose}>
+                  <Route path="/blog/blog1" component={MemberBox} />
+            <Route path="/blog/blog2" component={MemberBox}/>
+            </Route>
+
+
+
+                    </Route>
+
+
     </Router>
 ), document.getElementById('content'));
 

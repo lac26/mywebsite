@@ -12,14 +12,12 @@ export default React.createClass({
     return (
       <div>
       <div>
-        <div className={style.menu}>
-          <h1 className={style.pageHeader}>Welcome to my corner of the web.  <br/> My name is Lydia <br/> I'm a software developer, traveler, and creator. </h1>
-          <div className={style.nav} role="nav">
+        <div className={style.blogMenu}>
+          <h1 className={style.pageHeader}>Click on the blog you would like to read. </h1>
+          <div role="nav">
           <ul>
-            <li><NavLink to="/" onlyActiveOnIndex>Home</NavLink></li>
-            <li><NavLink to="/about">About Me</NavLink></li>
-            <li><NavLink to="/blog">Blog</NavLink></li>
-            <li><NavLink to="/choose">Choose</NavLink></li>
+            <li><NavLink to="/blog/blog1">Blog1</NavLink></li>
+            <li><NavLink to="/blog/blog2">Blog2</NavLink></li>
           </ul>
           </div>
         </div>

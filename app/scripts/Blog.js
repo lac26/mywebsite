@@ -12,7 +12,9 @@ module.exports = React.createClass({
     render: function() {
         return (
         	  
-              <div dangerouslySetInnerHTML={{__html: this.props.children[1] + '<br/> <br/>' }} />
+              <div dangerouslySetInnerHTML={{__html: '<h1>' + this.props.children[1] + '</h1>' + this.props.children[3] 
+              + '<a title=\"Zhong Lane\" href=' + this.props.children[5] + ' target=\"_blank\">Comment on this post. </a></p>\n<p style=\"text-align:left;\">'
+              +  '</br>' }} />
 
         );
     }

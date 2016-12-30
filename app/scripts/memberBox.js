@@ -62,7 +62,9 @@ module.exports = React.createClass({
         var memberNodes = this.state.data.posts.map(function(post) {
             return (
                 <Blog>
+                title = {post.title}
                 content = {post.content}
+                URL = {post.URL}
                 </Blog>
             );
         });

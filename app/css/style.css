@@ -168,6 +168,12 @@ h1 {
   width: 25%;
   padding-right: 1%;
 }
+.blogPost {
+  font-size: 1em;
+}
+.blogHeader {
+  font-size: 2em;
+}
 /* responsive */
 @media all and (max-width: 640px) {
   .inputFormat {
