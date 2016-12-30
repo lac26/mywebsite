@@ -13,7 +13,7 @@ export default React.createClass({
       <div>
       <div>
         <div className={style.menu}>
-          <h1 className={style.pageHeader}>Welcome to my corner of the web.  Nice to meet you! </h1>
+          <h1 className={style.pageHeader}>Welcome to my corner of the web.  <br/> My name is Lydia <br/> I'm a software developer, traveler, and creator. </h1>
           <div className={style.nav} role="nav">
           <ul>
             <li><NavLink to="/" onlyActiveOnIndex>Home</NavLink></li>
