@@ -12,8 +12,9 @@ export default React.createClass({
     return (
       <div>
       <div>
-        <div className={style.blogMenu}>
+        
           <h1 className={style.pageHeader}>Click on the blog you would like to read. </h1>
+          <div className={style.blogMenu}>
           <div role="nav">
           <ul>
             <li><NavLink to="/blog/blog1">Travel Blog</NavLink></li>
