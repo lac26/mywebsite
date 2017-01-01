@@ -6,8 +6,6 @@ import React from 'react';
 import $ from 'jquery';
 import { POLL_INTERVAL } from './global';
 import Blog from './Blog';
-import style from '../css/style.css'
-
 
 var num = 0;
 var found = 0;
@@ -20,7 +18,7 @@ module.exports = React.createClass({
         num = num + 5;
 
         $.ajax({
-            url: 'https://public-api.wordpress.com/rest/v1.1/sites/mysquarecm.wordpress.com/posts?number=' + num,
+            url: 'https://public-api.wordpress.com/rest/v1.1/sites/buildingtechadv.wordpress.com/posts?number=' + num,
             dataType: 'json',
             cache: false,
         })
@@ -77,8 +75,8 @@ module.exports = React.createClass({
             <div>
                 <h1>Blogs</h1>
 
-                <div>  
-                <div className = {style.blogContent}>          
+                <div>   
+                <div className = {style.blogContent}>         
                 {memberNodes}
                 </div>
                 <br/>

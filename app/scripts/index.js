@@ -11,6 +11,7 @@ import App from './App.js';
 import Home from './Home.js';
 import About from './About.js';
 import Choose from './Choose.js';
+import TechBlog from './TechBlog.js';
 
 ReactDOM.render((
     <Router history={browserHistory}>
@@ -21,13 +22,13 @@ ReactDOM.render((
         	<Route path="/events/:id" component={MemberBox} />	
         	<Route path="/members" component={MemberBox} />
         	<Route path="/members/:id" component={MemberBox} />	
-            <Route path="/blog" component={MemberBox} />
+            <Route path="/blog" component={Choose} />
             <Route path="/events" component={About} />
             <Route path="/choose" component={Choose}/>
 
             <Route path="/blog" component={Choose}>
                   <Route path="/blog/blog1" component={MemberBox} />
-            <Route path="/blog/blog2" component={MemberBox}/>
+            <Route path="/blog/blog2" component={TechBlog}/>
             </Route>
 
 

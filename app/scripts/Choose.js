@@ -16,8 +16,8 @@ export default React.createClass({
           <h1 className={style.pageHeader}>Click on the blog you would like to read. </h1>
           <div role="nav">
           <ul>
-            <li><NavLink to="/blog/blog1">Blog1</NavLink></li>
-            <li><NavLink to="/blog/blog2">Blog2</NavLink></li>
+            <li><NavLink to="/blog/blog1">Travel Blog</NavLink></li>
+            <li><NavLink to="/blog/blog2">Technical Blog</NavLink></li>
           </ul>
           </div>
         </div>

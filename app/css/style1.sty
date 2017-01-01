@@ -12,10 +12,7 @@ purple = #551A8B
 dark-purple = #270c40
 light-blue = #66b8ff
 button-hover = #99cfff
-/* end color variables */
 
-
-/* menu */
 /* menu is a flexbox */
 .menu 
     display: flex
@@ -65,12 +62,9 @@ button-hover = #99cfff
   color: #444;
   cursor: default;
 }
-/* end menu */
 
-/* for footer */
 html
     height: 100%
-/* end formatting for footer */
 
 body 
     background: background
@@ -84,6 +78,8 @@ body
     padding-bottom: 60px
     display: flex
 
+.content
+
 
 footer
     background-color: dark-purple
@@ -96,14 +92,25 @@ footer
     color: background
     text-align: center
 
-/* format rest of content 80% to leave room for nav bar */
-h1, .blogContent, .blogMenu
-  width: 80%
+h1, h2, h3, h4 
+    font-weight: bold
+    padding: 0
+    width: 80%
 
-/* format menu button for choosing blog */
+h1 
+    border-bottom: 1px solid border
+    font-size: 1.5em
+
+.blogContent
+  width: 80%
+  background-color: red;
+
+
+/* formats menu bar */
 .blogMenu 
     text-align:center
     text-decoration: none
+    background-color: blue;
     li
         display: inline
         padding:0 30px
@@ -113,7 +120,74 @@ h1, .blogContent, .blogMenu
     a:hover
         color: dark-purple
 
+.pageHeader 
+    text-align: center
+    font-size: 1.5em
+    background-color: green
+
+.buttonFormat
+    font-size: .7em
+    color: purple
+    border-radius: 4px
+    padding: 6px
+    cursor: pointer
+    background-color: button-hover
+    text-decoration: none
+    border: 0
+
+
+.buttonFormat:hover
+    background-color: light-blue
+
+.editButtons
+    display: inline
+    .buttonFormat
+        margin: 2px
+
+/* Content formatting (members and events) */
+/* Member and event names */
+.contentHeader
+    font-size: 1em
+    font-weight: bold
+
+
+/* any information associtated with members or events */
+.contentInfo
+    font-size: .8em
 
 
 
+
+.blogPost
+    font-size: 1em
+
+.blogHeader
+    font-size: 2em
+
+
+/* responsive */
+@media all and (max-width 640px)
+    .inputFormat
+        width: 90%
+
+    .pageHeader 
+        font-size: 1.3em
+
+    .headerMenu 
+        padding-left: 2%
+        text-align:center
+        li
+            font-size: .7em
+            padding:0 2%
+
+    .contentInfo
+        width: 100%
+
+    .editButtons
+        .buttonFormat
+            width: 60px
+
+    footer 
+        font-size: .7em
+    
 

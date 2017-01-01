@@ -5,12 +5,11 @@
  * style.sty compiles into CSS
  */
 /* color variables */
+/* end color variables */
+/* menu */
 /* menu is a flexbox */
 .menu {
   display: flex;
-}
-.div {
-  display: none;
 }
 .nav {
   width: 20%;
@@ -26,7 +25,7 @@
   text-align: center;
   padding: 0;
   margin: 0;
-  width: 100%;
+  width: 100%; /* 80% might give a cool look */
   height: 100%;
 }
 .nav li {
@@ -38,7 +37,8 @@
   display: flex;
 }
 .nav a {
-  width: 100px; /* Or whatever */
+  width: 100%; /* Or whatever */
+  text-align: center;
   margin: auto /* ;  Magic! */;
   text-decoration: none;
   color: #fff;
@@ -53,23 +53,23 @@
   color: #444;
   cursor: default;
 }
+/* end menu */
+/* for footer */
 html {
   height: 100%;
 }
+/* end formatting for footer */
 body {
   background: #f0f8ff;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
   line-height: 1.7;
   margin: 0;
-  padding-left: 30px;
   position: relative;
   min-height: 90%;
+  width: 100%;
   padding-bottom: 60px;
   display: flex;
-}
-.content {
-  width: 70%;
 }
 footer {
   background-color: #270c40;
@@ -82,130 +82,25 @@ footer {
   color: #f0f8ff;
   text-align: center;
 }
+/* format rest of content 80% to leave room for nav bar */
 h1,
-h2,
-h3,
-h4 {
-  font-weight: bold;
-  margin: 0 0 15px;
-  padding: 0;
-}
-h1 {
-  border-bottom: 1px solid #ddd;
-  font-size: 1.5em;
+.blogContent,
+.blogMenu {
   width: 80%;
 }
-/* formats text boxes */
-.inputFormat {
-  padding: 10px;
-  margin-top: 5px;
-  border: 2px solid #551a8b;
-  border-radius: 4px;
-  width: 30%;
-  display: block;
-}
-.pageHeader {
+/* format menu button for choosing blog */
+.blogMenu {
   text-align: center;
-  font-size: 1.5em;
-  width: 80%;
-}
-.buttonFormat {
-  font-size: 0.7em;
-  color: #551a8b;
-  border-radius: 4px;
-  padding: 6px;
-  cursor: pointer;
-  background-color: #99cfff;
   text-decoration: none;
-  border: 0;
 }
-.websiteBlog {
-  background-color: #f00;
-}
-.buttonFormat:hover {
-  background-color: #66b8ff;
-}
-.editButtons {
+.blogMenu li {
   display: inline;
+  padding: 0 30px;
 }
-.editButtons .buttonFormat {
-  margin: 2px;
-}
-/* Content formatting (members and events) */
-/* Member and event names */
-.contentHeader {
-  font-size: 1em;
-  font-weight: bold;
-  width: 80%;
-}
-/* any information associtated with members or events */
-.contentInfo {
-  width: 50%;
-  font-size: 0.8em;
-}
-/* About page - leadership bios formatting */
-.leadershipName {
-  font-size: 1.1em;
-  font-weight: bold;
+.blogMenu a {
+  text-decoration: none;
   color: #551a8b;
 }
-.leadershipRole {
-  font-style: italic;
-  font-weight: normal;
-}
-.leadershipDesc {
-  width: 50%;
-}
-.leadershipEmail {
-  font-style: italic;
-  border-bottom: 1px solid #ddd;
-}
-/* home page - image formatting */
-.imageOne {
-  width: 51%;
-}
-.imageTwo {
-  width: 25%;
-  padding-right: 1%;
-}
-.blogPost {
-  font-size: 1em;
-}
-.blogHeader {
-  font-size: 2em;
-}
-/* responsive */
-@media all and (max-width: 640px) {
-  .inputFormat {
-    width: 90%;
-  }
-  .pageHeader {
-    font-size: 1.3em;
-  }
-  .headerMenu {
-    padding-left: 2%;
-    text-align: center;
-  }
-  .headerMenu li {
-    font-size: 0.7em;
-    padding: 0 2%;
-  }
-  .contentInfo {
-    width: 100%;
-  }
-  .editButtons .buttonFormat {
-    width: 60px;
-  }
-  .imageOne {
-    width: 90%;
-  }
-  .imageTwo {
-    width: 90%;
-  }
-  .leadershipDesc {
-    width: 90%;
-  }
-  footer {
-    font-size: 0.7em;
-  }
+.blogMenu a:hover {
+  color: #270c40;
 }
