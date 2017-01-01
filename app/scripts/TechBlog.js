@@ -6,6 +6,8 @@ import React from 'react';
 import $ from 'jquery';
 import { POLL_INTERVAL } from './global';
 import Blog from './Blog';
+import style from '../css/style.css'
+
 
 var num = 0;
 var found = 0;
