@@ -25,7 +25,6 @@ export default React.createClass({
         {this.props.children}
         </div>
     
-        <footer>Calvin College Women in Computing</footer>
         </div>
     )
   }

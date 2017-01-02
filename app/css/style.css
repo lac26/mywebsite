@@ -5,6 +5,7 @@
  * style.sty compiles into CSS
  */
 /* color variables */
+/*PALETTE*/
 /* end color variables */
 .nav {
   width: 20%;
@@ -15,7 +16,7 @@
 }
 .nav ul {
   list-style: none;
-  background-color: #444;
+  background-color: #515d87 /* dark purple */;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -40,7 +41,7 @@
   transition: 0.3s background-color;
 }
 .nav li:hover {
-  background-color: #005f5f;
+  background-color: #7db0d6;
 }
 .nav li.active {
   background-color: #fff;
@@ -54,7 +55,7 @@ html {
 }
 /* end formatting for footer */
 body {
-  background: #f0f8ff;
+  background: #c0e2fc;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 20px;
   line-height: 1.7;
@@ -65,14 +66,15 @@ body {
   padding-bottom: 60px;
 }
 footer {
-  background-color: #270c40;
+  background-color: #306998;
+  opacity: 0.7;
   height: 50px;
   width: 100%;
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  color: #f0f8ff;
+  color: #c0e2fc;
   text-align: center;
 }
 /* format rest of content 80% to leave room for nav bar */
@@ -93,8 +95,13 @@ footer {
 }
 .blogMenu a {
   text-decoration: none;
-  color: #551a8b;
+  color: #306998;
 }
 .blogMenu a:hover {
-  color: #270c40;
+  color: #515d87 /* dark purple */;
+}
+/* header implemnted in App and Choose */
+.pageHeader {
+  text-align: center;
+  font-size: 1.5em;
 }

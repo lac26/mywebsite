@@ -6,12 +6,25 @@
  */
 
 /* color variables */
-background = #F0F8FF
 border = #ddd
 purple = #551A8B
 dark-purple = #270c40
 light-blue = #66b8ff
 button-hover = #99cfff
+
+/*PALETTE*/
+color1 = #306998
+color2 = #0291B9
+color3 = #515D87 /* dark purple */
+color4 = #C6D1E5
+color5 = #7DB0D6
+color6 = #C0E2FC
+
+
+side-menu = color3
+side-menu-hover = color5
+background = color6
+footer = color1
 /* end color variables */
 
 
@@ -24,7 +37,7 @@ button-hover = #99cfff
 
 .nav ul 
   list-style: none;
-  background-color: #444;
+  background-color: side-menu;
   text-align: center;
   padding: 0;
   margin: 0;
@@ -45,13 +58,13 @@ button-hover = #99cfff
   text-align: center;
   margin: auto/* ;  Magic! */
   text-decoration: none;
-  color: #fff;
+  color: white;
   display: block;
   transition: .3s background-color;
 
  
 .nav li:hover 
-  background-color: #005f5f;
+  background-color: side-menu-hover;
 
  
 .nav li.active {
@@ -60,6 +73,8 @@ button-hover = #99cfff
   cursor: default;
 }
 /* end menu */
+
+
 
 /* for footer */
 html
@@ -78,7 +93,8 @@ body
     padding-bottom: 60px
 
 footer
-    background-color: dark-purple
+    background-color: footer
+    opacity: 0.7
     height: 50px
     width 100%
     position: absolute
@@ -102,9 +118,14 @@ footer
         padding:0 30px
     a
         text-decoration: none
-        color: purple
+        color: color1
     a:hover
-        color: dark-purple
+        color: color3
+
+/* header implemnted in App and Choose */
+.pageHeader 
+    text-align: center
+    font-size: 1.5em
 
 
 
