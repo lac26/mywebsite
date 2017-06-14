@@ -50,7 +50,6 @@ module.exports = React.createClass({
              console.log("num is " + num);
              console.log("found is " + found);
              if (num >= found){
-                //TODO: hide button
                 $("button").hide();
              }
          }.bind(this))
@@ -62,6 +61,7 @@ module.exports = React.createClass({
 
         if (this.state.data.posts){
         var memberNodes = this.state.data.posts.map(function(post) {
+            console.log("nodes", memberNodes);
             return (
                 <Blog>
                 title = {post.title}
@@ -75,8 +75,6 @@ module.exports = React.createClass({
 
         return (
             <div>
-                <h1>Blogs</h1>
-
                 <div>   
                 <div className = {style.blogContent}>         
                 {memberNodes}

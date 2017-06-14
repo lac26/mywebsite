@@ -13,14 +13,16 @@ export default React.createClass({
       <div>
       <div>
         <div className={style.menu}>
-          <h1 className={style.pageHeader}>Welcome to my corner of the web.  <br/> My name is Lydia <br/> I'm a software developer, traveler, and creator. </h1>
+          <h1 className={style.pageHeader}>Welcome to my corner of the web.  <br/> My name is Lydia <br/> ... </h1>
           <div className={style.nav} role="nav">
+          <nav>
           <ul>
             <li><NavLink to="/" onlyActiveOnIndex>Home</NavLink></li>
             <li><NavLink to="/about">About Me</NavLink></li>
             <li><NavLink to="/blog">Blog</NavLink></li>
             <li><NavLink to="/choose">Choose</NavLink></li>
           </ul>
+          </nav>
           </div>
         </div>
         {this.props.children}

@@ -7,6 +7,7 @@
 /* color variables */
 /*PALETTE*/
 /* end color variables */
+/*
 .nav {
   width: 20%;
   position: fixed;
@@ -16,11 +17,11 @@
 }
 .nav ul {
   list-style: none;
-  background-color: #515d87 /* dark purple */;
+  background-color: #515d87 ;
   text-align: center;
   padding: 0;
   margin: 0;
-  width: 100%; /* 80% might give a cool look */
+  width: 100%; 
   height: 100%;
 }
 .nav li {
@@ -32,9 +33,10 @@
   display: flex;
 }
 .nav a {
-  width: 100%; /* Or whatever */
+  width: 100%; 
+  height: 100%;
   text-align: center;
-  margin: auto /* ;  Magic! */;
+  margin: auto ;
   text-decoration: none;
   color: #fff;
   display: block;
@@ -48,6 +50,83 @@
   color: #444;
   cursor: default;
 }
+
+*/
+/* end menu */
+
+/* menu */
+/* code based on https://codepen.io/Jeruva/pen/LuBqw */
+body { background-color:#333;
+}
+
+nav{
+  top: 0;
+  float: right; 
+  clear: both;
+  width: 13%; 
+  /*margin: 10% auto;*/
+  background: #eee;
+  box-shadow:2px 2px 2px;
+  font-family: 'Shadows Into Light', cursive;
+  font-size:24px;
+  position: fixed;
+  right: 0;
+  top: 0px;
+  height: 100%;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+  height: 100%;
+}
+
+nav li{
+  float: none; 
+  width: 100%;
+  height: 25%;
+}
+
+nav li a{
+  display: block; 
+  width: 100%; 
+  height: 100%;
+  padding: 10px; 
+  border-left: 5px solid; 
+  position: relative; 
+  z-index: 2;
+  text-decoration: none;
+  color: #444;
+  box-sizing: border-box;  
+  -moz-box-sizing: border-box;  
+  -webkit-box-sizing: border-box; 
+}
+  
+nav li a:hover{ border-bottom: 0px; color: #fff;}
+nav li:first-child a{ border-left: 10px solid #3498db; }
+nav li:nth-child(2) a{ border-left: 10px solid #ffd071; }
+nav li:nth-child(3) a{ border-left: 10px solid #f0776c; }
+nav li:last-child a{ border-left: 10px solid #1abc9c; }
+
+nav li a:after { 
+  content: "";
+  height: 100%; 
+  left: 0; 
+  top: 0; 
+  width: 0px;  
+  position: absolute; 
+  transition: all 0.3s ease 0s; 
+  -webkit-transition: all 0.3s ease 0s; 
+  z-index: -1;
+}
+nav li a:hover:after{ width: 100%; }
+nav li:first-child a:after{ background: #1C699C; }
+nav li:nth-child(2) a:after{ background: #B87A00; }
+nav li:nth-child(3) a:after{ background: #FF311F; }
+nav li:last-child a:after{ background: #149077; }
+
+
 /* end menu */
 /* for footer */
 html {
@@ -60,10 +139,10 @@ body {
   font-size: 20px;
   line-height: 1.7;
   margin: 0;
-  position: relative;
   min-height: 90%;
   width: 100%;
   padding-bottom: 60px;
+  font-family: 'Shadows Into Light', cursive;
 }
 footer {
   background-color: #306998;

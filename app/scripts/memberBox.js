@@ -75,8 +75,6 @@ module.exports = React.createClass({
 
         return (
             <div>
-                <h1>Blogs</h1>
-
                 <div>  
                 <div className = {style.blogContent}>          
                 {memberNodes}
