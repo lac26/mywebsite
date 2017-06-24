@@ -18,10 +18,6 @@ ReactDOM.render((
         <Route path="/" component={App}>
          	<IndexRoute component={Home}/>
         	<Route path="/about" component={About} />
-        	<Route path="/events" component={MemberBox} />
-        	<Route path="/events/:id" component={MemberBox} />	
-        	<Route path="/members" component={MemberBox} />
-        	<Route path="/members/:id" component={MemberBox} />	
             <Route path="/blog" component={Choose} />
             <Route path="/events" component={About} />
             <Route path="/choose" component={Choose}/>
@@ -30,15 +26,10 @@ ReactDOM.render((
                   <Route path="/blog/blog1" component={MemberBox} />
             <Route path="/blog/blog2" component={TechBlog}/>
             </Route>
-
-
-
-                    </Route>
-
-
+        
+        </Route>
     </Router>
 ), document.getElementById('content'));
 
 
-l
 

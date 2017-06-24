@@ -1,4 +1,4 @@
-/* Authors: Paige Brinks (plb7), Lydia Cupery (lac26)
+/* Authors: Lydia Cupery
  * 
  * Date: December 19, 2016
  * App.js is the default route, has the header, menu bar, and content */
