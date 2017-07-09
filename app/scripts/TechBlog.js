@@ -27,7 +27,7 @@ module.exports = React.createClass({
          .done(function(result){
             found = result.found; 
 
-            console.log(found);
+            //console.log("results are", found);
              this.setState({data: result});
          }.bind(this))
          .fail(function(xhr, status, errorThrown) {
@@ -61,7 +61,7 @@ module.exports = React.createClass({
 
         if (this.state.data.posts){
         var memberNodes = this.state.data.posts.map(function(post) {
-            console.log("nodes", memberNodes);
+            console.log("nodes", post);
             return (
                 <Blog>
                 title = {post.title}
